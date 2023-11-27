@@ -12,4 +12,29 @@ Flask is an API of Python that allows us to build up web-applications. It was de
 Python 2.6 or higher is required for the installation of the Flask. You can start by import Flask from the flask package on any python IDE. For installation on any environment, you can click on the installation link given below.<br>
 To test that if the installation is working, check out this code given below.</p>
 
+<p>Create working enviroment:
+
+--  Install virtual enviroment and add virtual enviroment
+pip install virtualenv
+python -m virtualenv venv
+source venv/bin/activate # for Linux/MacOS
+venv\Scripts\activate 
+
+pip install flask
+
+set FLASK_APP=main.py
+flask run
+
+</p>
+
+<code>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Good day and good coding, Flask Framework!</p>"
+</code>
+
 
