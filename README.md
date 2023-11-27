@@ -29,7 +29,10 @@ flask run
 
 </p>
 
-<code>
+<p>
+Example flask run code:
+</p>
+<pre>
 from flask import Flask
 
 app = Flask(__name__)
@@ -37,6 +40,6 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return "<p>Good day and good coding, Flask Framework!</p>"
-</code>
+</pre>
 
 
