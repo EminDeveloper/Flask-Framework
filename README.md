@@ -15,6 +15,7 @@ To test that if the installation is working, check out this code given below.</p
 <p>Create working enviroment:
 
 --  Install virtual enviroment and add virtual enviroment
+<pre>
 pip install virtualenv
 python -m virtualenv venv
 source venv/bin/activate # for Linux/MacOS
@@ -24,6 +25,7 @@ pip install flask
 
 set FLASK_APP=main.py
 flask run
+</pre>
 
 </p>
 
