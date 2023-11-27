@@ -5,3 +5,11 @@
 
 # Python | Introduction to Web development using Flask
 
+<p><b>What is Flask?</b><br>
+Flask is an API of Python that allows us to build up web-applications. It was developed by Armin Ronacher. Flask’s framework is more explicit than Django’s framework and is also easier to learn because it has less base code to implement a simple web-Application. A Web-Application Framework or Web Framework is the collection of modules and libraries that helps the developer to write applications without writing the low-level codes such as protocols, thread management, etc. Flask is based on WSGI(Web Server Gateway Interface) toolkit and Jinja2 template engine.</p>
+
+<p><b>Getting Started With Flask:</b><br>
+Python 2.6 or higher is required for the installation of the Flask. You can start by import Flask from the flask package on any python IDE. For installation on any environment, you can click on the installation link given below.<br>
+To test that if the installation is working, check out this code given below.</p>
+
+
