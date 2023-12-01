@@ -59,6 +59,11 @@ def hello_world():
 </table>
 
 
+<p>&nbsp;<br>
+<b>Routing:</b><br>
+Nowadays, the web frameworks provide routing technique so that user can remember the URLs. It is useful to access the web page directly without navigating from the Home page. It is done through the following <code>route()</code> decorator, to bind the URL to a function.</p>
+
+
 
 
 
