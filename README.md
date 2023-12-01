@@ -45,3 +45,10 @@ def hello_world():
 <p>The Flask application is started by calling the <code>run()</code> function. The method should be restarted manually for any change in the code. To overcome this, the debug support is enabled so as to track any error.</p>
 
 
+
+
+
+
+
+
+  
