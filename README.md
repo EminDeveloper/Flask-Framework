@@ -63,5 +63,20 @@ def hello_world():
 <b>Routing:</b><br>
 Nowadays, the web frameworks provide routing technique so that user can remember the URLs. It is useful to access the web page directly without navigating from the Home page. It is done through the following <code>route()</code> decorator, to bind the URL to a function.</p>
 
-
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="comments"># decorator to route URL </code></div>
+<div class="line number2 index1 alt1"><code class="decorator">@app</code><code class="plain">.route(‘</code><code class="keyword">/</code><code class="plain">hello’)&nbsp;&nbsp; </code></div>
+<div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+<div class="line number4 index3 alt1"><code class="comments"># binding to the function of route&nbsp; </code></div>
+<div class="line number5 index4 alt2"><code class="keyword">def</code> <code class="plain">hello_world():&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div>
+<div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="plain">‘hello world’ </code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 
