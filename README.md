@@ -83,5 +83,5 @@ Nowadays, the web frameworks provide routing technique so that user can remember
 </tbody>
 </table>
 
-
+<p>If a user visits http://localhost:5000/hello URL, the output of the hello_world() function will be rendered in the browser. The <code>add_url_rule()</code> function of an application object can also be used to bind URL with the function as in above example.</p>
 
