@@ -41,6 +41,8 @@ app = Flask(__name__)
 def hello_world():
     return "Good day and good coding, Flask Framework!"
 </pre>
+
+
 <p>‘/’ URL is bound with <code>hello()</code> function. When the home page of the webserver is opened in the browser, the output of this function will be rendered accordingly.</p>
 <p>The Flask application is started by calling the <code>run()</code> function. The method should be restarted manually for any change in the code. To overcome this, the debug support is enabled so as to track any error.</p>
 
@@ -63,6 +65,7 @@ def hello_world():
 <b>Routing:</b><br>
 Nowadays, the web frameworks provide routing technique so that user can remember the URLs. It is useful to access the web page directly without navigating from the Home page. It is done through the following <code>route()</code> decorator, to bind the URL to a function.</p>
 
+
 <table border="0" cellpadding="0" cellspacing="0">
 <tbody>
 <tr>
@@ -79,4 +82,6 @@ Nowadays, the web frameworks provide routing technique so that user can remember
 </tr>
 </tbody>
 </table>
+
+
 
