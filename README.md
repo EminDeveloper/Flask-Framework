@@ -85,3 +85,51 @@ Nowadays, the web frameworks provide routing technique so that user can remember
 
 <p>If a user visits http://localhost:5000/hello URL, the output of the hello_world() function will be rendered in the browser. The <code>add_url_rule()</code> function of an application object can also be used to bind URL with the function as in above example.</p>
 
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="keyword">def</code> <code class="plain">hello_world(): </code></div>
+<div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="plain">‘hello world’ </code></div>
+<div class="line number3 index2 alt2"><code class="plain">app.add_url_rule(‘</code><code class="keyword">/</code><code class="plain">’, ‘hello’, hello_world) </code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>&nbsp;<br>
+<b>Using Variables in Flask:</b><br>
+The Variables in the flask is used to build a URL dynamically by adding the variable parts to the rule parameter. This variable part is marked as. It is passed as keyword argument. See the example below</p>
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="keyword">from</code> <code class="plain">flask </code><code class="keyword">import</code> <code class="plain">Flask </code></div>
+<div class="line number2 index1 alt1"><code class="plain">app </code><code class="keyword">=</code> <code class="plain">Flask(__name__) </code></div>
+<div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+<div class="line number4 index3 alt1"><code class="comments"># routing the decorator function hello_name </code></div>
+<div class="line number5 index4 alt2"><code class="decorator">@app</code><code class="plain">.route(</code><code class="string">'/hello/&lt;name&gt;'</code><code class="plain">)&nbsp;&nbsp; </code></div>
+<div class="line number6 index5 alt1"><code class="keyword">def</code> <code class="plain">hello_name(name): </code></div>
+<div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="string">'Hello %s!'</code> <code class="keyword">%</code> <code class="plain">name </code></div>
+<div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+<div class="line number9 index8 alt2"><code class="keyword">if</code> <code class="plain">__name__ </code><code class="keyword">=</code><code class="keyword">=</code> <code class="string">'__main__'</code><code class="plain">: </code></div>
+<div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">app.run(debug </code><code class="keyword">=</code> <code class="color1">True</code><code class="plain">) </code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Save the above example as hello.py and run from power shell. Next, open the browser and enter the URL http://localhost:5000/hello/GeeksforGeeks.</p>
+
+
+
+
+
