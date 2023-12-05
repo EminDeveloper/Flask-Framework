@@ -130,6 +130,74 @@ The Variables in the flask is used to build a URL dynamically by adding the vari
 <p>Save the above example as hello.py and run from power shell. Next, open the browser and enter the URL http://localhost:5000/hello/GeeksforGeeks.</p>
 
 
+<p>In the above example, the parameter of route() decorator contains the variable part attached to the URL ‘/hello’ as an argument. Hence, if URL like http://localhost:5000/hello/GeeksforGeeks is entered then ‘GeeksforGeeks’ will be passed to the hello() function as an argument.</p>
+
+<p>In addition to the default string variable part, other data types like int, float, and path(for directory separator channel which can take slash) are also used. The URL rules of Flask are based on Werkzeug’s routing module. This ensures that the URLs formed are unique and based on precedents laid down by Apache. </p>
+
+<p><strong>Examples:</strong></p>
+
+<div class="noIdeBtnDiv">
+<div class="code-block">
+<div class="code-gutter">
+<div class="editor-buttons-container">
+<div class="editor-buttons">
+<div class="editor-buttons-div" title="Run and Edit">
+                                    <i id="copy-code-button" title="Copy Code" class="gfg-icon gfg-icon_copy code-sidebar-button padding-2px copy-code-button"></i><p></p>
+<div id="run-and-edit-loader" class="ring-load"></div>
+<p>                                    <i id="run-and-edit-button" title="Edit Code" lang="python3" class="gfg-icon gfg-icon_edit_1 padding-2px code-sidebar-button"></i><br>
+                                    <i id="close-code-editor-button" title="Close Editor" class="gfg-icon gfg-icon_close-editor padding-2px code-sidebar-button close-code-editor-button"></i></p>
+<div id="run-code-loader" class="ring-load"></div>
+<p>                                    <i id="run-code-button" lang="python3" title="Run Code and See Output" class="gfg-icon gfg-icon_play padding-2px code-sidebar-button"></i></p>
+<div id="generate-url-loader" class="ring-load"></div>
+<p>                                    <i id="generate-url-and-run-button" title="Run Code and Generate IDE URL" lang="python3" class="gfg-icon gfg-icon_link padding-2px code-sidebar-button generate-url-and-run-button"></i><br>
+                                    <i title="Light Mode" class="gfg-icon padding-2px code-sidebar-button light-editor-button gfg-icon_light-toggle"></i><br>
+                                    <i id="edit-on-ide-button" title="Edit on IDE" lang="python3" class="gfg-icon gfg-icon_code padding-2px code-sidebar-button edit-on-ide-button"></i>
+                                </p></div>
+<p></p></div>
+<p></p></div>
+<p></p></div>
+<div class="code-container">
+<div id="highlighter_389901" class="syntaxhighlighter nogutter night">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="keyword">from</code> <code class="plain">flask </code><code class="keyword">import</code> <code class="plain">Flask </code></div>
+<div class="line number2 index1 alt1"><code class="plain">app </code><code class="keyword">=</code> <code class="plain">Flask(__name__) </code></div>
+<div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+<div class="line number4 index3 alt1"><code class="decorator">@app</code><code class="plain">.route(</code><code class="string">'/blog/&lt;postID&gt;'</code><code class="plain">) </code></div>
+<div class="line number5 index4 alt2"><code class="keyword">def</code> <code class="plain">show_blog(postID): </code></div>
+<div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="string">'Blog Number %d'</code> <code class="keyword">%</code> <code class="plain">postID </code></div>
+<div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+<div class="line number8 index7 alt1"><code class="decorator">@app</code><code class="plain">.route(</code><code class="string">'/rev/&lt;revNo&gt;'</code><code class="plain">) </code></div>
+<div class="line number9 index8 alt2"><code class="keyword">def</code> <code class="plain">revision(revNo): </code></div>
+<div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="string">'Revision Number %f'</code> <code class="keyword">%</code> <code class="plain">revNo </code></div>
+<div class="line number11 index10 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+<div class="line number12 index11 alt1"><code class="keyword">if</code> <code class="plain">__name__ </code><code class="keyword">=</code><code class="keyword">=</code> <code class="string">'__main__'</code><code class="plain">: </code></div>
+<div class="line number13 index12 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">app.run() </code></div>
+<div class="line number14 index13 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+<div class="line number15 index14 alt2"><code class="comments"># say the URL is <a href="http://localhost:5000/blog/555">http://localhost:5000/blog/555</a> </code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<div class="code-editor-container"></div>
+<p></p></div>
+<div class="code-output-container">
+<div class="output-block">
+                        <i id="output-icon" title="Output" class="gfg-icon gfg-icon_arrow-right-editor padding-2px code-sidebar-button output-icon"></i><p></p>
+<pre class="output-pre"></pre>
+<p></p></div>
+<div class="ide-link-div">
+                        <i id="copy-url-button" title="Copy Generated Ide URL" class="gfg-icon gfg-icon_copy padding-2px code-sidebar-button copy-url-button"></i><p></p>
+<pre id="ide-url"></pre>
+<p></p></div>
+<p></p></div>
+<p></p></div>
+
 
 
 
