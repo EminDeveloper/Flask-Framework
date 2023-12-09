@@ -123,3 +123,4 @@ app = Flask(__name__)
 </code></div>
 <p>Here, accessing the root URL (<code>'/'</code>) will display 'Index Page', while visiting <code>/hello</code> will render 'Hello, World'.</p>
 <h3>Dynamic Routing:</h3>
+<p>Flask supports dynamic URLs, allowing parts of the URL to be variable. You can specify variable sections in the route by using <code>&lt;variable_name&gt;</code>. These variables can then be captured and utilized within the view function.</p>
