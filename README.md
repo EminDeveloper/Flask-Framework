@@ -124,3 +124,7 @@ app = Flask(__name__)
 <p>Here, accessing the root URL (<code>'/'</code>) will display 'Index Page', while visiting <code>/hello</code> will render 'Hello, World'.</p>
 <h3>Dynamic Routing:</h3>
 <p>Flask supports dynamic URLs, allowing parts of the URL to be variable. You can specify variable sections in the route by using <code>&lt;variable_name&gt;</code>. These variables can then be captured and utilized within the view function.</p>
+<div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">'/user/&lt;username&gt;'</span></span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">show_user_profile</span>(<span class="hljs-params">username</span>):
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f'User: <span class="hljs-subst">{username}</span>'</span>
+</code></div>
