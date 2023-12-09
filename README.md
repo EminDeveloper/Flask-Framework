@@ -1,7 +1,9 @@
-<h1>Flask-Framework</h1> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" jsaction="VQAsE" class="sFlh5c pT0Scc iPVvYb" style="max-width: 1200px; height: 332px; margin: 0px; width: 847px;" alt="Flask (web framework) - Wikipedia" jsname="kn3ccd" aria-hidden="false">
+<h1>Flask-Framework</h1> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" jsaction="VQAsE" class="sFlh5c pT0Scc iPVvYb" style="max-width: 1200px; height: 332px; margin: 0px; width: 847px;" alt="Flask (web framework)" jsname="kn3ccd" aria-hidden="false">
 
 
-<p style="text-align:justify;">This <strong>Flask Tutorial</strong> is the latest and comprehensive guide designed for beginners and professionals to learn <strong>Python Flask</strong> framework, which is one of the most popular Python-based web frameworks. Whether you are a beginner or an experienced developer, this tutorial is specially designed to help you learn and master Flask and build your own real-world web applications. This Flask Tutorial covers a wide range of topics from basic concepts such as setup and installation to advanced concepts like user authentication, database integration, and deployment. In addition to this, we also provide you with a list of Flask projects, FAQs, and interview questions for your future Interview.</p>
+<h3>About Flask Framework:</h3>
+<p>Flask is a lightweight and flexible web framework for Python. It's designed to be easy to use and build web applications quickly and efficiently. Some of its key features include:</p>
+<ul><li><strong>Lightweight</strong>: Flask is simple and easy to get started with.</li><li><strong>Modularity</strong>: It allows you to choose the components you need and easily integrate them.</li><li><strong>Built-in development server</strong>: Flask comes with a built-in development server, making it convenient for testing your applications.</li><li><strong>Extensible</strong>: It provides various extensions to add functionalities as needed.</li><li><strong>Jinja2 Templating</strong>: Flask uses the Jinja2 templating engine to render HTML templates.</li></ul>
 
 # Python | Introduction to Web development using Flask
 
