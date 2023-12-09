@@ -91,3 +91,35 @@ def hello_world():
 </table>
 
 <h2>Routing<a class="headerlink" href="#routing" title="Link to this heading">¶</a></h2>
+
+<p>Creating effective routes in web applications is crucial for user engagement. A well-crafted URL not only helps users remember and revisit a page but also enhances their overall experience. Flask simplifies this process by employing the <code>route()</code> decorator to link a function to a specific URL.</p>
+
+<div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">'/'</span></span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Index Page'</span>
+
+<span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">'/hello'</span></span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Hello, World'</span>
+</code></div>
+<h3>Basic Routing:</h3>
+<p>In Flask, routing is achieved using the <code>@app.route()</code> decorator. This decorator binds a URL to a Python function, defining what should be displayed or executed when that URL is accessed.</p>
+
+<div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">'/'</span></span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Index Page'</span>
+
+<span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">'/hello'</span></span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Hello, World'</span>
+</code></div>
+<p>Here, accessing the root URL (<code>'/'</code>) will display 'Index Page', while visiting <code>/hello</code> will render 'Hello, World'.</p>
+<h3>Dynamic Routing:</h3>
