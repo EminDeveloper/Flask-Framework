@@ -124,9 +124,10 @@ app = Flask(__name__)
 <p>Here, accessing the root URL (<code>'/'</code>) will display 'Index Page', while visiting <code>/hello</code> will render 'Hello, World'.</p>
 <h3>Dynamic Routing:</h3>
 <p>Flask supports dynamic URLs, allowing parts of the URL to be variable. You can specify variable sections in the route by using <code>&lt;variable_name&gt;</code>. These variables can then be captured and utilized within the view function.</p>
-<code id="read-only-cursor-text-area" aria-label="file content" aria-readonly="true" inputmode="none" tabindex="0" aria-multiline="true" aria-haspopup="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off" data-ms-editor="false" class="react-blob-print-hide" style="resize: none; margin-top: -2px; padding-left: 92px; width: 100%; background-color: unset; color: transparent; position: absolute; border: none; tab-size: 8; outline: none; overflow: auto hidden; height: 220px; font-size: 12px; line-height: 20px; overflow-wrap: normal; white-space: pre;">
+
+``` 
 from flask import Flask
 @app.route('/user/<username>')
 def show_user_profile(username):
-    return f'User: {username}'
-</code>
+    return f'User: {username}' 
+```
