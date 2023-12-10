@@ -192,3 +192,130 @@ These grouped routes are then registered with the main application.
 Understanding and effectively utilizing routing in Flask is key to building well-structured, navigable, and user-friendly web applications.
 
 
+## Flask – HTTP Method
+
+### Handling HTTP Methods in Flask
+
+This repository explores the implementation of various HTTP methods within Flask using Python. The project focuses on understanding the core concepts of HTTP methods—GET, POST, PUT, PATCH, and DELETE—while demonstrating their usage in Flask applications.
+
+## Core Concepts
+
+### GET
+GET requests are utilized to retrieve data from the server. They are commonly used when fetching information from a specified resource.
+
+### POST
+POST requests involve submitting data to the server for processing. This method is employed when there's a need to send data to be stored or manipulated on the server.
+
+### PUT
+PUT requests are used to modify data on the server. They replace the entire content at a specific location with the data provided in the request body. If the requested resource doesn't exist, a new one is created.
+
+### PATCH
+Similar to PUT requests, PATCH requests modify data. However, the key distinction lies in their functionality—they update specific parts of the data, replacing only the content intended for modification.
+
+### DELETE
+DELETE requests serve to remove data located at a specified server location. They are instrumental in erasing a resource from the server.
+
+## Implementation
+
+The code within this repository showcases practical examples demonstrating the usage of each HTTP method within Flask. Understanding these methods is fundamental as they form the backbone of data exchange between clients and servers in web development.
+
+Feel free to explore the code and examples provided in this repository to gain a deeper understanding of handling HTTP methods in Flask.
+
+# Understanding HTTP Methods in Client-Server Communication
+
+In a Client-Server architecture, communication between these entities is governed by protocols, defining the rules for seamless interaction. One such fundamental protocol is the Hyper Text Transfer Protocol (HTTP), facilitating communication between clients and servers.
+
+## The Role of HTTP in Client-Server Interaction
+
+Consider the scenario where our browser communicates with a server, like Google, to fetch information. This exchange is made possible through the HTTP. For instance, when we enter a query in our browser, it's transmitted to the Google server, which then processes it and returns relevant suggestions.
+
+## Commonly Used HTTP Methods
+
+### GET
+The GET method is a fundamental part of HTTP, primarily used for retrieving data from a server. It is employed when the client needs specific information or resources from the server.
+
+### POST
+POST, another vital HTTP method, is used for submitting data to the server. This method is crucial when the client intends to send data to the server for storage or processing.
+
+Understanding these HTTP methods—GET for fetching data and POST for submitting data—forms the core of how clients and servers interact, enabling the seamless exchange of information in the realm of web communication.
+
+Feel free to explore further to gain a deeper understanding of HTTP methods and their role in the Client-Server architecture.
+
+
+### Example of Using HTTP GET in Flask
+
+This example demonstrates the implementation of the GET method using Flask. We'll create a landing page that provides insights into mathematical calculations and enables users to input a number to retrieve its square.
+
+### Implementation Steps
+
+#### Step 1: Setting Up the HTML Form
+
+Create a file named `square.html` containing a form tag allowing users to input a number. The form's `action` attribute specifies the destination for the form data. As we're utilizing the GET method, the data will be appended to the URL in a name-value pair format.
+
+For instance, if a user enters the number 12 and clicks the Submit button, the data will be appended to the URL in the following format:
+
+http://localhost:5000/square?num=12&btnnum=Submit#
+
+### HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square</title>
+</head>
+<body>
+<h1><i> Welcome to the Maths page!</i></h1>
+    <p>Logic shapes every choice of our daily lives.<br>
+    Logical thinking enables someone to learn and
+    make decisions that affect their way of life. !</p>
+    <form method="GET" action ="#">
+        Enter a number :
+        <input type="text" name="num" id="num"></input>
+        <input type="submit" name="btnnum" id="btnnum"></input>
+  </form>
+</body>
+</html>
+```
+#### Step 2: The answer.html code file looks as follows:
+
+### HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer Page!</title>
+</head>
+<body>
+    <h1>Keep Learning Maths!</h1>
+    <h2>Square of number {{num}} is :{{squareofnum}}</h2>
+</body>
+</html>
+```
+
+# Handling GET Requests in Flask: A Code Example
+
+### Step 3: Writing the View Function
+
+In this step, we'll create a view function called `squarenumber`. This function serves as a handler for incoming HTTP requests and returns an HTTP response. The function is decorated with `app.route('/square')`, which associates incoming request URLs with specific view functions in Flask.
+
+```python
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/square', methods=['GET'])
+def squarenumber():
+    num = request.args.get('num')
+    if num is None:
+        return render_template('squarenum.html')
+    elif not num.isdigit():
+        error_message = 'Please enter a valid number.'
+        return render_template('squarenum.html', error=error_message)
+    else:
+        num = int(num)
+        square = num * num
+        return render_template('squarenum.html', number=num, result=square)
+```
+
