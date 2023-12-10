@@ -89,7 +89,7 @@ def hello_world():
 The Flask application is started by calling the```run()``` function. The method should be restarted manually for any change in the code. To overcome this, the debug support is enabled so as to track any error.
 
 ```python
-app.debug = True
+app.debug=True
 app.run()
 app.run(debug=True) 
 ```
@@ -143,4 +143,52 @@ from flask import Flask
 def show_user_profile(username):
     return f'User: {username}' 
 ```
+This route captures any URL with the pattern ```/user/<username>``` and passes the username variable to the ```show_user_profile()``` function.
+
+### URL Building:
+Flask provides the ```url_for()``` function to build URLs dynamically based on the endpoint name. This helps avoid hardcoding URLs in the application, making it more maintainable and flexible.
+
+```python
+from flask import url_for
+
+@app.route('/profile')
+def profile():
+    # Assume the function name is 'show_user_profile'
+    return url_for('show_user_profile', username='JohnDoe')
+```
+This ```url_for()``` function generates the URL for the ```show_user_profile()``` function, passing the username as a parameter.
+
+### HTTP Methods and Multiple Routes:
+Flask also allows specifying HTTP methods (GET, POST, etc.) for a route. By default, routes only respond to GET requests, but you can explicitly define other methods using the **methods** parameter in the ```@app.route()``` decorator.
+
+```python
+@app.route('/submit', methods=['POST'])
+def submit_data():
+    # Process form data
+    pass
+```
+This route will only handle POST requests sent to **/submit**.
+
+### Grouping Routes:
+Flask enables you to group routes using the **Blueprint** feature, allowing for better organization of your application's endpoints. This helps maintain a clear structure as your application grows.
+
+```python
+from flask import Blueprint
+
+auth_bp = Blueprint('auth', __name__)
+
+@auth_bp.route('/login')
+def login():
+    # Login logic
+    pass
+
+@auth_bp.route('/logout')
+def logout():
+    # Logout logic
+    pass
+```
+These grouped routes are then registered with the main application.
+
+Understanding and effectively utilizing routing in Flask is key to building well-structured, navigable, and user-friendly web applications.
+
 
