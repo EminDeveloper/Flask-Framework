@@ -64,12 +64,9 @@ It's crucial to highlight that this HTML page is securely stored in the template
 
 
 ```html
-<!-- templates/login.html-->
-
 <html>
-
 <head>
-	<title>Handling of http get and post request</title>
+	<title>Handling http get and post requests</title>
 	<style>
 		div {
 			width: 400px;
@@ -81,7 +78,6 @@ It's crucial to highlight that this HTML page is securely stored in the template
 </head>
 
 <body>
-
 	<div>
 <!-- url_for will route the forms request to 
 appropriate function that user made to handle it.-->
@@ -113,6 +109,105 @@ on the backend side using 'name' field of form.-->
 		</form>
 	</div>
 </body>
-
 </html>
 ```
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20230109142602/login-page.png)
+
+
+## Step 3: Creating the app.py File
+
+In this step, we've created an `app.py` Python file where three functions have been defined:
+
+1. `handle_get()`
+2. `handle_post()`
+3. `logout()`
+
+These functions are designed to manage user login activities. To specify the type of request they handle, we've utilized the `methods` attribute. In this example:
+
+- The functions utilize a dictionary to store user credentials. However, in a real application, this data would likely be stored in a secure database using hashing to protect passwords. For the purpose of this demonstration, our focus is on understanding GET and POST requests.
+  
+- The `handle_get()` function handles the GET request, using the `args` attribute to process the incoming data.
+  
+- The `handle_post()` function manages the POST method, employing the `POST` attribute to handle the form data submission.
+
+
+### app.py file input code
+
+```python
+from flask import Flask, render_template, request, redirect, session
+
+app = Flask(__name__)
+
+# Set a secret key for encrypting session data
+app.secret_key = 'your_secret_key'
+
+# dictionary to store user and password
+users = {
+	'mike': 'pw1988',
+	'luka': 'password1987'
+}
+
+# To render a login form 
+@app.route('/')
+def view_form():
+	return render_template('login.html')
+
+# For handling get request form we can get
+# the form inputs value by using args attribute.
+# this values after submitting you will see in the urls.
+# e.g http://127.0.0.1:5000/handle_get?username=mike&password=pw1988
+# this exploits our credentials so that's 
+# why developers prefer POST request.
+@app.route('/handle_get', methods=['GET'])
+def handle_get():
+	if request.method == 'GET':
+		username = request.args['username']
+		password = request.args['password']
+		print(username, password)
+		if username in users and users[username] == password:
+			return '<h1>Welcome!!!</h1>'
+		else:
+			return '<h1>invalid credentials!</h1>'
+	else:
+		return render_template('login.html')
+
+# For handling post request form we can get the form
+# inputs value by using POST attribute.
+# this values after submitting you will never see in the urls.
+@app.route('/handle_post', methods=['POST'])
+def handle_post():
+	if request.method == 'POST':
+		username = request.form['username']
+		password = request.form['password']
+		print(username, password)
+		if username in users and users[username] == password:
+			return '<h1>Welcome!!!</h1>'
+		else:
+			return '<h1>invalid credentials!</h1>'
+	else:
+		return render_template('login.html')
+
+if __name__ == '__main__':
+	app.run()
+```
+
+
+**Step 4:** To run the app.py file run the below command in the command prompt.
+
+**Run app now!**
+```bash
+cd flaskhttpmethods
+set FLASK_APP=app.py
+flask run
+```
+
+## Output:
+
+In the following output, we observe the login behavior between two forms:
+
+- **First Form (Using GET Request):** 
+  When logging in through the first form, the username and password are visible in the URL. Despite this visibility, the user successfully logs in due to the usage of a GET request.
+
+- **Second Form (Using POST Request):** 
+  Contrastingly, when the user logs in through the second form, which employs a POST request, the username and password remain hidden from the URL. This method of submission still allows the user to successfully log in, while maintaining the confidentiality of the login credentials.
