@@ -67,7 +67,7 @@ venv\Scripts\activate
 
 pip install flask
 
-set FLASK_APP=main.py
+set FLASK_APP=app.py
 flask run
 ```
 
