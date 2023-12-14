@@ -64,4 +64,38 @@ flask run
 
 ![browser data](../usagecovers/2.png)
 
+## Using `url_for()` in Flask
 
+There's this cool thing in Flask called `url_for()` that helps with directing to different places.
+
+Here's how it works: when you want to send someone to a particular place on your website, you use `url_for()`. You give it the name of the function you want to go to, and if that function needs some info (like a name), you can pass it in the URL.
+
+Let's check out this example code:
+
+```python
+from flask import Flask, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route('/admin')
+def hello_admin():
+    return 'Hello Admin'
+
+@app.route('/guest/<guest>')
+def hello_guest(guest):
+    return 'Hello %s as Guest' % guest
+
+@app.route('/user/<name>')
+def hello_user(name):
+    if name == 'admin':
+        return redirect(url_for('hello_admin'))
+    else:
+        return redirect(url_for('hello_guest', guest=name))
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+**Output**
+
+![admin data](../usagecovers/3.png)
