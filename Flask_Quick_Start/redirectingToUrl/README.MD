@@ -62,4 +62,6 @@ flask run
 
 ![redirect with Visual Studio](../usagecovers/1.png)
 
+![browser data](../usagecovers/2.png)
+
 
