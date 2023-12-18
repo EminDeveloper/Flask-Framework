@@ -1,4 +1,4 @@
-# Flask HTTP methods, handle GET & POST requests
+# Flask Framework - Flask HTTP methods, handle GET & POST requests
 
 So, this article is about how we deal with GET and POST requests in Flask using Python.
 

@@ -1,8 +1,8 @@
-# Flask – Variable Rule
+# Flask Framework - Variable Rule
 
 Hey there! Today, we're talking about Flask in Python. It's a small web framework written in Python. What's cool about it is that it's simple to get started with, and you can make big, complex apps with it later on.
 
-### Flask - Variable Rules
+### Variable Rules
 
 Variable rules in Flask help us make dynamic URLs. It's like adding blank spots to the web address that we can fill in later.
 We use this funny-looking syntax `<variable-name>` in our code to create these variable rules.

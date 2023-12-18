@@ -1,4 +1,4 @@
-# CSRF Protection in Flask
+# Flask Framework - CSRF Protection in Flask
 
 Let's explore how you can protect your data using CSRF (Cross-Site Request Forgery) protection by doing a mini-project in Flask. We'll create a webpage with two forms in Python, one of which has protection. Making forms like these helps us understand the benefits of using CSRF protection for our application.
 

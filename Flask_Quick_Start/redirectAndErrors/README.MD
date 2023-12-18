@@ -1,4 +1,4 @@
-# Python Flask – Redirect and Errors
+# Flask Framework - Python Flask – Redirect and Errors
 
 ## Redirects and Errors Handling in Python Flask
 

@@ -1,4 +1,4 @@
-# Template Inheritance
+# Flask Framework - Template Inheritance
 
 
 Read this text. Change, update and write better in English this content which write as your 13-year-old can understand:

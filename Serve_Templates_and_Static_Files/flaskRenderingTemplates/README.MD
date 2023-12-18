@@ -1,4 +1,4 @@
-# Flask Rendering Templates
+# Flask Framework - Flask Rendering Templates
 
 Flask is like a toolbox for making websites using Python. It's all about creating web stuff in a really Python-y way. You get to use cool Python tools and tricks to build your website. With Flask, you can even make a server to show your web pages using simple HTML designs and something called Jinja2 (it's like a special way to make your pages look awesome).
 

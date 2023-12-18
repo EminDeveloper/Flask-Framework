@@ -1,4 +1,4 @@
-# Placeholders in jinja2 Template
+# Flask Framework - Placeholders in jinja2 Template
 
 
 Websites are made using a language called HTML to create what you see and use. But what if we want to bring in stuff from other places or control things using a programming language like Python? That's where a tool like Jinja2 comes in. It helps by letting us put special codes in a template that looks a lot like Python. When we give it information, it creates the final page for us.
