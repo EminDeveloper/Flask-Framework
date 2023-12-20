@@ -28,7 +28,7 @@ def index():
 		db.session.add(upload)
 		db.session.commit()
 		return f'Uploaded: {file.filename}'
-	return render_template('index.html')
+	return render_template('index')
 
 
 
@@ -38,3 +38,5 @@ def download(upload_id):
 	upload = Upload.query.filter_by(id=upload_id).first()
 	return send_file(BytesIO(upload.data), 
 					download_name=upload.filename, as_attachment=True)
+
+
