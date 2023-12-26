@@ -29,4 +29,20 @@ Next up, for the part people see on the website, we need to create an HTML file.
 
 We must make another HTML file just for acknowledgment. Create a file inside the templates folder called `Acknowledgement.html` to do this. This will only be triggered if the file upload went smoothly. Here, the user will receive a confirmation.
 
+**Acknowledgement.html**
+
+```jinja
+<html> 
+<head> 
+	<title>success</title> 
+</head> 
+<body> 
+	<p>File uploaded successfully</p> 
+	<p>File Name: {{name}}</p> 
+</body> 
+</html>
+```
+
+Go to the `main.py` file and type in these codes. This code helps find the name of the file we're working on. After that, we'll save the file we uploaded to the main folder.
+
 
